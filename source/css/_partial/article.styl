@@ -45,7 +45,10 @@
   padding: 0 article-padding
   p, table
     line-height: line-height
-    margin: line-height 0
+  p
+    margin: line-height 1em
+  table
+    margin: 1em 0
   h1, h2, h3, h4, h5, h6
     font-weight: bold
   h1, h2, h3, h4, h5, h6
@@ -70,18 +73,27 @@
     width: 100%
     border-collapse: collapse
     border-spacing: 0
+    border-bottom: 3px solid color-border
+    border-top: 3px solid color-border
   th
     font-weight: bold
     border-bottom: 3px solid color-border
     padding-bottom: 0.5em
+    padding-left: 1em
+    background-color: block-quote-bgcolor
+  tr:nth-child(even)
+    background-color: block-quote-bgcolor
   td
     border-bottom: 1px solid color-border
     padding: 10px 0
+    padding-left: 1em
   blockquote
+    background-color: block-quote-bgcolor
+    border-left: 4px solid block-quote-border-left-color;
     font-family: font-serif
-    font-size: 1.4em
-    margin: line-height 20px
-    text-align: center
+    font-size: 1.1em
+    margin: line-height 0
+    text-align: left
     footer
       font-size: font-size
       margin: line-height 0
@@ -90,6 +102,10 @@
         &:before
           content: "—"
           padding: 0 0.5em
+    p
+      padding: 1em 0
+    code
+      background-color: #ddd
   .pullquote
     text-align: left
     width: 45%
